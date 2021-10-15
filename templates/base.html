@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>枝江标记</title>
+    <link href="https://google-fonts.mirrors.sjtug.sjtu.edu.cn/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" rel="stylesheet">
+    <link href="/static/material-size.css" rel="stylesheet">
+    <link href="/static/center.css" rel="stylesheet">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</head>
+<body>
+<!-- Simple header with fixed tabs. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+            mdl-layout--fixed-tabs">
+  <header class="mdl-layout__header mdl-layout--no-drawer-button">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">枝江标记</span>
+    </div>
+    <!-- Tabs -->
+    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+      <a href="/query" class="mdl-layout__tab is-active"><i class="material-icons md2px">search</i>查询</a>
+      <a href="/mark" class="mdl-layout__tab"><i class="material-icons md2px">visibility</i>标记</a>
+      <a href="/mark_list" class="mdl-layout__tab"><i class="material-icons md2px">list</i>名单</a>
+      <a href="/subcribe" class="mdl-layout__tab"><i class="material-icons md2px">notifications</i>订阅</a>
+      <a href="/user" class="mdl-layout__tab"><i class="material-icons md2px">account_circle</i>用户</a>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">枝江标记</span>
+  </div>
+  <main class="mdl-layout__content">
+    <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+      <div class="page-content">{% block content %}{% endblock %}</div>
+    </section>
+  </main>
+</div>
+</body>
+</html>
