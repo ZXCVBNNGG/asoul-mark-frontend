@@ -1,15 +1,18 @@
+from jinja2 import FileSystemLoader
 from sanic import Sanic
 from sanic_jinja2 import SanicJinja2
-from jinja2 import FileSystemLoader
 
 app = Sanic("AsoulMark")
 template = SanicJinja2(app, loader=FileSystemLoader("templates"))
 app.static('/static', './statics')
+from src.pages.query import query
+
+app.add_route(query, "/query")
 
 
 @app.get("/")
 @template.template("query.html")
-async def query(request):
+async def homepage(request):
     return None
 
 
